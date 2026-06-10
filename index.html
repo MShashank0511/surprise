@@ -332,7 +332,7 @@
 <!-- YES / NO PAGE                             -->
 <!-- ══════════════════════════════════════════ -->
 <div id="page-yesno" class="page">
-  <div class="hearts floating">🌸  🌸</div>
+  <div class="hearts floating">🌷 🌷</div>
   <p class="question">Will you go out with me?</p>
   <p class="sub">I promise it'll be the most wonderful time </p>
   <div class="btn-area">
@@ -346,7 +346,7 @@
 <!-- PRAGATHI KI — PHOTO REVEAL                -->
 <!-- ══════════════════════════════════════════ -->
 <div id="page-pragathi" class="page">
-  <div class="hearts floating">💕 ✨ 💕</div>
+  <div class="hearts floating">🌷 ✨ 🌷</div>
   <p class="question" style="margin-bottom:0.4rem">Ante...</p>
   <p class="sub">Ante...</p>
 
@@ -398,7 +398,7 @@
       <div class="cal-cell disabled">25</div><div class="cal-cell disabled">26</div><div class="cal-cell disabled">27</div><div class="cal-cell disabled">28</div>
       <div class="cal-cell disabled">29</div><div class="cal-cell disabled">30</div>
     </div>
-    <button class="confirm-btn" id="confirm-btn" onclick="confirmDate()">Pick a date first! 💕</button>
+    <button class="confirm-btn" id="confirm-btn" onclick="confirmDate()">Pick a date first! 🌷</button>
   </div>
 
   <div class="success-msg" id="success-msg" style="display:none">
@@ -451,7 +451,7 @@
     "The 'No' button is broken, sorry~ 💕",
     "Nice try! But destiny says yes 🌸",
     "You can't escape this one~",
-    "The button has a mind of its own 🥰",
+    "The button has a mind of its own ",
     "Still no? It keeps running away!",
     "I think the universe is trying to tell you something...",
   ];
@@ -469,10 +469,10 @@
   /* ── Photo reveal ── */
   const frames = document.querySelectorAll('.photo-frame');
   const hints = [
-    "tap again! 🌸", "keep going... 💕", "more coming~ ✨",
-    "almost there 💖", "you're doing great 🥰", "just a little more...",
-    "one more! 💫", "so close... 🌷", "nearly there 💝",
-    "two more! ✨", "one last one! 💕", "now click to continue 💌"
+    "tap again! 🌸", "keep going... ", "more coming~ ✨",
+    "almost there ", "you're doing great ", "just a little more...",
+    "one more! 💫", "so close... 🌷", "nearly there ",
+    "two more! ✨", "one last one! ", "now click to continue "
   ];
   let revealed = 0;
   let allShown = false;
@@ -503,7 +503,7 @@
     selectedDate = date;
     const btn = document.getElementById('confirm-btn');
     btn.classList.add('ready');
-    btn.textContent = `June ${date} — it's a date! 💕`;
+    btn.textContent = `June ${date} — it's a date! 🌷`;
   }
 
   function confirmDate() {
@@ -546,7 +546,7 @@
         if (data.success) {
 
             document.getElementById('saved-msg').textContent =
-                "Saved successfully 💕";
+                "Saved successfully 🌷";
         }
 
     } catch(err) {
