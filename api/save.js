@@ -1,6 +1,6 @@
-import { neon } from '@neondatabase/serverless';
+import { Resend } from 'resend';
 
-const sql = neon(process.env.DATABASE_URL);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(req, res) {
 
@@ -14,10 +14,20 @@ export default async function handler(req, res) {
 
     try {
 
-        await sql`
-            INSERT INTO responses(date, message)
-            VALUES(${date}, ${message})
-        `;
+        await resend.emails.send({
+            from: 'onboarding@resend.dev',
+            to: 'shashank9940@gmail.com',
+            subject: '💕 Date Selection Received',
+            html: `
+                <h2>Someone selected a date 💕</h2>
+
+                <p><strong>Date:</strong> ${date}</p>
+
+                <p><strong>Message:</strong></p>
+
+                <p>${message || 'No message provided'}</p>
+            `
+        });
 
         return res.status(200).json({
             success: true
@@ -28,7 +38,7 @@ export default async function handler(req, res) {
         console.error(err);
 
         return res.status(500).json({
-            error: 'Database error'
+            error: 'Failed to send email'
         });
     }
 }

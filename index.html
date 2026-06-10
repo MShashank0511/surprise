@@ -403,31 +403,34 @@
 
   <div class="success-msg" id="success-msg" style="display:none">
     <div class="big">💌</div>
-
+  
     <p id="success-text"></p>
-
+  
     <textarea
       id="user-message"
-      placeholder="Any suggestions for our date?"
+      placeholder="Any suggestions for the date? "
       style="
-      width:300px;
-      height:120px;
-      margin-top:20px;
-      padding:10px;
+        width:100%;
+        max-width:320px;
+        height:120px;
+        margin-top:15px;
+        padding:12px;
+        border-radius:12px;
+        border:1px solid #ddd;
+        resize:none;
       ">
     </textarea>
-
+  
     <br><br>
-
+  
     <button
       onclick="submitResponse()"
       class="next-btn">
       Send 💌
     </button>
-
+  
     <p id="saved-msg"></p>
-</div>
-
+  </div>
 <script>
   /* ── Page navigation ── */
   function showPage(id) {
