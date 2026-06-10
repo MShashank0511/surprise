@@ -16,7 +16,7 @@ export default async function handler(req, res) {
 
         await resend.emails.send({
             from: 'onboarding@resend.dev',
-            to: 'shashank9940@gmail.com',
+            to: 'shashank99490@gmail.com',
             subject: '💕 Date Selection Received',
             html: `
                 <h2>Someone selected a date 💕</h2>
